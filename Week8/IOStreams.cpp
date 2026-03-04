@@ -1,6 +1,6 @@
 #include <iostream>
 // #include // Part 1: For File I/O Streams
-// #include // Part 1: For getline()
+// #include // Part 2: For getline()
 // #include // Part 2: For helper functions like isupper() or isdigit()
 // #include // Part 3: For stream manipulators like setw()
 
