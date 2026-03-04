@@ -16,23 +16,7 @@ void part1() {
     // Step 2: Check if the file opened (Print an error if not)
 
 
-    // Step 3: Read and print each line from the file
-
-
-    // Reset the file to read from the beginning again (Completed)
-    // Does anyone know why I am closing and reopening the files?
-    inFile.close();
-    inFile.open("input.txt");
-    if (!inFile.is_open()) {
-        cout << "Error reopening input.txt!" << endl;
-        return;
-    }
-
-
-    // Step 4: Read and print each word from the file (Not each line)
-
-
-    // Step 5: Close the file
+    // Step 3: Close the file
 
 
     cout << endl;
@@ -45,7 +29,20 @@ void part2() {
     // Step 1: Open the input file input2.txt
 
 
-    // Step 2: Read and print each character individually
+    // Step 2: Read and print each line from the file
+
+
+    // Reset the file to read from the beginning again (Completed)
+    // Does anyone know why I am closing and reopening the files?
+    inFile.close();
+    inFile.open("input.txt");
+    if (!inFile.is_open()) {
+        cout << "Error reopening input.txt!" << endl;
+        return;
+    }
+
+
+    // Step 3: Read and print each word from the file (Not each line)
 
 
     // Reset the file to read from the beginning again (Completed)
@@ -57,7 +54,7 @@ void part2() {
     }
 
 
-    // Step 3: Count and print all uppercase letters
+    // Step 4: Read and print each character individually
 
 
     // Reset the file to read from the beginning again (Completed)
@@ -69,7 +66,19 @@ void part2() {
     }
 
 
-    // Step 4: Read using a delimiter (comma) and print each section
+    // Step 5: Count and print all uppercase letters
+
+
+    // Reset the file to read from the beginning again (Completed)
+    inFile.close();
+    inFile.open("input2.txt");
+    if (!inFile.is_open()) {
+        cout << "Error reopening input2.txt!" << endl;
+        return;
+    }
+
+
+    // Step 6: Read using a delimiter (comma) and print each section
 
 
 }

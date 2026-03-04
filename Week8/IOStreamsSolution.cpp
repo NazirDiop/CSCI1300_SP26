@@ -35,32 +35,7 @@ void part1() {
     }
 
 
-    // Step 3: Read and print each line from the file
-    cout << "Printing lines from input.txt: " << endl;
-    string line;
-    while (getline(inFile, line)) {
-        cout << line << endl;
-    }
-
-
-    // Reset the file to read from the beginning again (Completed)
-    inFile.close();
-    inFile.open("input.txt");
-    if (!inFile.is_open()) {
-        cout << "Error reopening input.txt!" << endl;
-        return;
-    }
-
-    
-    // Step 4: Read and print each word from the file (Not each line)
-    cout << endl << "Printing individual words from input.txt: " << endl;
-    string word;
-    while (inFile >> word) {
-        cout << word << endl;
-    }
-
-
-    // Step 5: Close the file
+    // Step 3: Close the file
     inFile.close();
 
 
@@ -79,7 +54,42 @@ void part2() {
     }
 
 
-    // Step 2: Read and print each character individually
+    // Step 2: Read and print each line from the file
+    cout << "Printing lines from input.txt: " << endl;
+    string line;
+    while (getline(inFile, line)) {
+        cout << line << endl;
+    }
+
+
+    // Reset the file to read from the beginning again (Completed)
+    // Does anyone know why I am closing and reopening the files?
+    inFile.close();
+    inFile.open("input.txt");
+    if (!inFile.is_open()) {
+        cout << "Error reopening input.txt!" << endl;
+        return;
+    }
+
+    
+    // Step 3: Read and print each word from the file (Not each line)
+    cout << endl << "Printing individual words from input.txt: " << endl;
+    string word;
+    while (inFile >> word) {
+        cout << word << endl;
+    }
+
+
+    // Reset the file to read from the beginning again (Completed)
+    inFile.close();
+    inFile.open("input.txt");
+    if (!inFile.is_open()) {
+        cout << "Error reopening input.txt!" << endl;
+        return;
+    }
+
+
+    // Step 4: Read and print each character individually
     cout << "Read each character from input2.txt: " << endl;
     char ch;
     while(inFile.get(ch)) {
@@ -96,7 +106,7 @@ void part2() {
     }
 
 
-    // Step 3: Count and print all uppercase letters
+    // Step 5: Count and print all uppercase letters
     cout << endl << "Count uppercase letters: " << endl;
     char character;
     int upperCount = 0;
@@ -122,7 +132,7 @@ void part2() {
     }
 
 
-    // Step 4: Read using a delimiter (comma) and print each section
+    // Step 6: Read using a delimiter (comma) and print each section
     cout << endl << "Read with a comma delimiter: " << endl;
     string line;
     char delimiter = ',';
